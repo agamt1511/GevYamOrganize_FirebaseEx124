@@ -1,14 +1,14 @@
 package com.example.gevyamorganize_firebaseex124;
 
 public class Orders {
-    String OrderID;
+    int OrderID;
     String Date;
     String Time;
     String OrderEmployee;
     String OrderMeal;
     String OrderSupplier;
 
-    public Orders(String OrderID, String Date, String Time, String OrderEmployee,
+    public Orders(int OrderID, String Date, String Time, String OrderEmployee,
                   String OrderMeal, String OrderSupplier) {
         this.OrderID = OrderID;
         this.Date = Date;

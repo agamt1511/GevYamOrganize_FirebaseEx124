@@ -41,12 +41,11 @@ public class MealsAdd extends AppCompatActivity {
             meal4_de = desert.getText().toString();
             meal5_be = beverage.getText().toString();
 
-            Meals employees =new Meals(mealID, meal1_ap ,meal2_mc ,meal3_ex, meal4_de, meal5_be);
-            FBref.refEmployees.child(mealID+"").setValue(employees);
+            Meals meals =new Meals(mealID, meal1_ap ,meal2_mc ,meal3_ex, meal4_de, meal5_be);
+            FBref.refMeals.child(mealID+"").setValue(meals);
             mealID++;
 
             Toast.makeText(this, "The data was added successfully", Toast.LENGTH_LONG).show();
-
             Intent si = new Intent(this,MealsShow.class);
             startActivity(si);
         }

@@ -8,7 +8,7 @@ public class Meals {
     String Dessert;
     String Beverage;
 
-    public Meals (String MealID, String Appetizer, String MainCourse, String Extra,
+    public Meals (int MealID, String Appetizer, String MainCourse, String Extra,
                          String Dessert, String Beverage) {
         this.MealID=MealID;
         this.Appetizer=Appetizer;
