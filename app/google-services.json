@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "864448701108",
+    "project_id": "gevyamorganize-firebaseex124",
+    "storage_bucket": "gevyamorganize-firebaseex124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864448701108:android:2b7723ca58f28a56f92de1",
+        "android_client_info": {
+          "package_name": "com.example.gevyamorganize_firebaseex124"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864448701108-ersl74u0nt43flu4tmt8kepgm4i4n0as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIR-YPNs2IaAiT8Y80GYHLyl0D5Kihb6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864448701108-ersl74u0nt43flu4tmt8kepgm4i4n0as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
