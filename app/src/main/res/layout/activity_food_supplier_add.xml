@@ -76,7 +76,21 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="20" />
+            android:layout_weight="5" />
+
+        <EditText
+            android:id="@+id/DealerNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:ems="10"
+            android:hint="dealerNumber"
+            android:inputType="number" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
 
         <Button
             android:layout_width="match_parent"

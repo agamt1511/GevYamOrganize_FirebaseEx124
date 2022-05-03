@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class FoodSupplierAdd extends AppCompatActivity {
-    EditText ComName, PPhone, SPhone;
+    EditText ComName, PPhone, SPhone, DealerNum;
     String Company_Name, Primary_Phone, Second_Phone;
-    int dealerNumber = 1;
+    int dealerNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,13 @@ public class FoodSupplierAdd extends AppCompatActivity {
         ComName = (EditText) findViewById(R.id.ComName);
         PPhone = (EditText) findViewById(R.id.PPhone);
         SPhone = (EditText) findViewById(R.id.SPhone);
+        DealerNum = (EditText) findViewById(R.id.DealerNum);
     }
 
     public void add(View view) {
         if (checking(view)){
             FoodSupplier foodSupplier =new FoodSupplier(Company_Name ,dealerNumber, Primary_Phone ,Second_Phone);
             FBref.refFoodSupplier.child(dealerNumber+"").setValue(foodSupplier);
-            dealerNumber++;
 
             Toast.makeText(this, "The data was added successfully", Toast.LENGTH_LONG).show();
             Intent si = new Intent(this,FoodSupplierShow.class);
@@ -39,7 +39,8 @@ public class FoodSupplierAdd extends AppCompatActivity {
     public boolean checking (View view){
         if ((TextUtils.isEmpty(ComName.getText().toString()))
                 || (TextUtils.isEmpty(PPhone.getText().toString()))
-                || (TextUtils.isEmpty(SPhone.getText().toString()))){
+                || (TextUtils.isEmpty(SPhone.getText().toString()))
+                || (TextUtils.isEmpty(DealerNum.getText().toString()))){
             Toast.makeText(this, "You did not enter any text", Toast.LENGTH_LONG).show();
             return false;
         }
@@ -47,6 +48,7 @@ public class FoodSupplierAdd extends AppCompatActivity {
             Company_Name = ComName.getText().toString();
             Primary_Phone = PPhone.getText().toString();
             Second_Phone = SPhone.getText().toString();
+            dealerNumber = Integer.parseInt(DealerNum.getText().toString());
 
             int lengthPP = PPhone.length();
             int lengthSP = SPhone.length();
