@@ -36,21 +36,20 @@ public class FoodSupplierUpdate extends AppCompatActivity {
     }
 
     public void update(View view) {
-       adding(view);
+       adding();
        delete(view);
     }
 
-    public void adding(View view){
-        if (checking(view)) {
+    public void adding(){
+        if (checking()) {
             FoodSupplier foodSupplier = new FoodSupplier(Company_Name, dealerNumber, Primary_Phone, Second_Phone);
             FBref.refFoodSupplier.child(dealerNumber + "").setValue(foodSupplier);
 
             Toast.makeText(this, "The data was added successfully", Toast.LENGTH_LONG).show();
         }
-        ;
     }
 
-    public boolean checking (View view){
+    public boolean checking (){
         if ((TextUtils.isEmpty(ComName.getText().toString()))
                 || (TextUtils.isEmpty(PPhone.getText().toString()))
                 || (TextUtils.isEmpty(SPhone.getText().toString()))
